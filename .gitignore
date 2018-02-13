@@ -1,18 +1,18 @@
 
-misc.xml
-workspace.xml
-tasks.xml
-dataSources.ids
-datasources.xml
-*.iml
-dictionaries
-sqlDataSources.xml
-dynamic.xml
-uiDesigner.xml
-gradle.xml
-libraries
-mongoSettings.xml
-deployment.xml
+.idea/misc.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dataSources.ids
+.idea/datasources.xml
+.idea/*.iml
+.idea/dictionaries
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/gradle.xml
+.idea/libraries
+.idea/mongoSettings.xml
+.idea/deployment.xml
 
 *~
 *.pyc
