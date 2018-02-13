@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="no" class="no-js " dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>Client (:9000)</title>
+    <link rel="stylesheet" href="//static.datakortet.no/font/fa470/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="//static.datakortet.no/dk/dkjs.min-1.2.1.css">
+
+    <script src='//static.datakortet.no/dk/dk-external.min-1.2.1.js'></script>
+    <!-- <script src='//static.datakortet.no/dk/dk.min-1.2.1.js'></script> -->
+    <script DEBUG src="//static.datakortet.no/dk/dk.js"></script>
+    <style>
+        .pre { font-family: monospace; display: inline-block; border: 1px solid #666;
+            background-color: #eaeaea;
+            border-radius: 3px; padding: 4px 7px; }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>hello {{ name }}!</h1>
+        <h2>hello from
+            <span class="pre" id="json">jQuery</span>
+        </h2>
+    </div>
+
+
+    <script>
+        dk.ready(function () {
+            $('#json').css({backgroundColor: 'red', color: 'white'});
+
+            $.getJSON('http://dserver:7000/djson/?_=' + +(new Date()), function (data) {
+                $('#json')
+                    .css({backgroundColor: 'green', color: 'white'})
+                    .text(data.name);
+            });
+
+        });
+    </script>
+</body>
+</html>
+
